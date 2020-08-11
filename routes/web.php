@@ -18,7 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/', function () {
-//     return view('welcome');
-// })->name('login');
-
+Route::get('/', function () {
+    return view('welcome');
+})->name('login');
