@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Traits;
+use App\Traits\FlashMessages;
 use Illuminate\Http\Request;
 
 class BaseController extends Controller

@@ -30,7 +30,7 @@ class SettingServiceProvider extends ServiceProvider
     {
         // only use the Settings package if the Settings table is present in the database
         if (!\App::runningInConsole() && count(Schema::getColumnListing('settings'))) {
-        $settings = Setting::all();
+        $settings = Settings::all();
         foreach ($settings as $key => $setting)
         {
             Config::set('settings.'.$setting->key, $setting->value);

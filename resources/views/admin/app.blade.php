@@ -193,9 +193,9 @@
                 <i class="mdi mdi-format-list-bulleted menu-icon"></i>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ route('admin.settings') }}">
-                <span class="menu-title">Forms</span>
+            <li class="nav-item {{ Route::currentRouteName() == 'admin.categories.index' ? 'active' : '' }}">
+              <a class="nav-link" href="{{ route('admin.categories.index') }}">
+                <span class="menu-title">Product Categories</span>
                 <i class="mdi mdi-format-list-bulleted menu-icon"></i>
               </a>
             </li>
