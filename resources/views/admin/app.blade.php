@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <!-- Required meta tags -->
+    <main class="app-content" id="app">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>@yield('title') - {{ config('app.name') }}</title>
@@ -199,15 +201,15 @@
                 <i class="mdi mdi-format-list-bulleted menu-icon"></i>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="pages/charts/chartjs.html">
-                <span class="menu-title">Charts</span>
+            <li class="nav-item {{ Route::currentRouteName() == 'admin.attributes.index' ? 'active' : '' }}" >
+              <a class="nav-link" href="{{ route('admin.attributes.index') }}">
+                <span class="menu-title">Attributes</span>
                 <i class="mdi mdi-chart-bar menu-icon"></i>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="pages/tables/basic-table.html">
-                <span class="menu-title">Tables</span>
+            <li class="nav-item {{ Route::currentRouteName() == 'admin.brands.index' ? 'active' : '' }}">
+              <a class="nav-link" href="{{ route('admin.brands.index') }}">
+                <span class="menu-title">Brands</span>
                 <i class="mdi mdi-table-large menu-icon"></i>
               </a>
             </li>
