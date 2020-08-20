@@ -189,9 +189,9 @@
                 </ul>
               </div>
             </li> -->
-            <li class="nav-item {{ Route::currentRouteName() == 'admin.settings' ? 'active' : '' }}">
-              <a class="nav-link" href="{{ route('admin.settings') }}">
-                <span class="menu-title">Settings</span>
+            <li class="nav-item {{ Route::currentRouteName() == 'admin.products' ? 'active' : '' }}">
+              <a class="nav-link" href="{{ route('admin.products.index') }}">
+                <span class="menu-title">Products</span>
                 <i class="mdi mdi-format-list-bulleted menu-icon"></i>
               </a>
             </li>
@@ -201,16 +201,23 @@
                 <i class="mdi mdi-format-list-bulleted menu-icon"></i>
               </a>
             </li>
+            <li class="nav-item {{ Route::currentRouteName() == 'admin.brands.index' ? 'active' : '' }}">
+              <a class="nav-link" href="{{ route('admin.brands.index') }}">
+                <span class="menu-title">Brands</span>
+                <i class="mdi mdi-table-large menu-icon"></i>
+              </a>
+            </li>
             <li class="nav-item {{ Route::currentRouteName() == 'admin.attributes.index' ? 'active' : '' }}" >
               <a class="nav-link" href="{{ route('admin.attributes.index') }}">
                 <span class="menu-title">Attributes</span>
                 <i class="mdi mdi-chart-bar menu-icon"></i>
               </a>
             </li>
-            <li class="nav-item {{ Route::currentRouteName() == 'admin.brands.index' ? 'active' : '' }}">
-              <a class="nav-link" href="{{ route('admin.brands.index') }}">
-                <span class="menu-title">Brands</span>
-                <i class="mdi mdi-table-large menu-icon"></i>
+
+            <li class="nav-item {{ Route::currentRouteName() == 'admin.settings' ? 'active' : '' }}">
+              <a class="nav-link" href="{{ route('admin.settings') }}">
+                <span class="menu-title">Settings</span>
+                <i class="mdi mdi-format-list-bulleted menu-icon"></i>
               </a>
             </li>
             <li class="nav-item">
