@@ -80,5 +80,13 @@ class ProductController extends BaseController
     // public function delete(Request $request){
         
     // }
+    public function images($id)
+    {
+        $product = $this->productRepository->findProductById($id);
+        $this->setPageTitle('Products', 'Edit Product');
+        return view('admin.products.images', compact('product'));
+    }
 
+      
+   
 }

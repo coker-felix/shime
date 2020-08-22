@@ -28,6 +28,7 @@
                           <th> Price </th>
                           <th> Status </th>
                           <th> Actions </th>
+                          <th> Product Images </th>
                         </tr>
                       </thead>
                       <tbody>
@@ -59,6 +60,12 @@
                                                 <a href="{{ route('admin.products.edit', $product->id) }}" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></a>
                                                
                                             </div>
+                                        </td>
+                                        <td>
+                                        <div class="btn-group" role="group" aria-label="Second group">
+                                            <a href="{{ route('admin.products.images', $product->id) }}" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></a>
+                                            
+                                        </div>
                                         </td>
                                     </tr>
                                 
