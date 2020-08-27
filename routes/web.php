@@ -20,4 +20,5 @@ Route::view('/', 'site.pages.homepage');
 
 Auth::routes();
 Route::get('/category/{slug}', 'Site\CategoryController@show')->name('category.show');
+Route::get('/product/{slug}', 'Site\ProductController@show')->name('product.show');
 Route::get('/home', 'HomeController@index')->name('home');
