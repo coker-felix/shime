@@ -13,11 +13,11 @@ require 'admin.php';
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Auth::routes();
+Auth::routes();
 
 
-Route::get('/', 'site.pages.homepage');
+Route::view('/', 'site.pages.homepage');
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('login');
+Auth::routes();
+Route::get('/category/{slug}', 'Site\CategoryController@show')->name('category.show');
+Route::get('/home', 'HomeController@index')->name('home');

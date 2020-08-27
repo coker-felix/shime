@@ -117,7 +117,13 @@ class CategoryRepository extends BaseRepository implements CategoryContract
         $category->delete();
         return $category;
     }
-
+    public function findBySlug($slug)
+    {
+        return Category::with('products')
+            ->where('slug', $slug)
+            ->where('menu', 1)
+            ->first();
+    }
 
 
 
