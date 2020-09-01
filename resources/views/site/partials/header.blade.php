@@ -71,7 +71,11 @@
 							<li class="nav-item"><a class="nav-link" href="{{ route('logout') }}">Logout</a></li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
-							<li class="nav-item"><a href="#" class="cart"><span class="ti-bag"></span></a></li>
+							<li class="nav-item"><a href="{{ route('checkout.cart') }}" class="cart"><span class="ti-bag"></span></a>
+							<div class="text-wrap">
+								<small>{{ $cartCount }} items</small>
+							</div>
+							</li>
 							<li class="nav-item">
 								<button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
 							</li>
@@ -81,7 +85,7 @@
 				</div>
 			</nav>
 		</div>
-		<div class="search_input" id="search_input_box">
+		<!-- <div class="search_input" id="search_input_box">
 			<div class="container">
 				<form class="d-flex justify-content-between">
 					<input type="text" class="form-control" id="search_input" placeholder="Search Here">
@@ -89,7 +93,7 @@
 					<span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
 				</form>
 			</div>
-		</div>
+		</div> -->
 	</header>
 	<!-- End Header Area -->
 
