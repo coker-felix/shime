@@ -200,7 +200,12 @@
                 <i class="mdi mdi-chart-bar menu-icon"></i>
               </a>
             </li>
-
+            <li class="nav-item {{ Route::currentRouteName() == 'admin.orders.index' ? 'active' : '' }}" >
+              <a class="nav-link" href="{{ route('admin.orders.index') }}">
+                <span class="menu-title">Orders</span>
+                <i class="mdi mdi-chart-bar menu-icon"></i>
+              </a>
+            </li>
             <li class="nav-item {{ Route::currentRouteName() == 'admin.settings' ? 'active' : '' }}">
               <a class="nav-link" href="{{ route('admin.settings') }}">
                 <span class="menu-title">Settings</span>

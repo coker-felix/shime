@@ -65,7 +65,12 @@ Route::group(['prefix' => 'admin'], function () {
             Route::get('images/{id}/delete', 'Admin\ProductImageController@delete')->name('admin.products.images.delete');
         
         });
-        
+
+            Route::group(['prefix' => 'orders'], function () {
+                Route::get('/', 'Admin\OrderController@index')->name('admin.orders.index');
+                Route::get('/{order}/show', 'Admin\OrderController@show')->name('admin.orders.show');
+        });
+            
     });
 
     
